@@ -1,0 +1,14 @@
+﻿@model IEnumerable<SocialNetworking_Kata.Data.Models.UserProfile>
+@{
+	ViewBag.Title = "Home Page";
+	ViewBag.Message = "Hello!";
+}
+
+<div class="jumbotron">
+	<h1>ASP.NET</h1>
+	<div>@if (Model != null)
+	{
+	<p>There are</p> @Model.Count() <p> user profiles in the db. </p>
+	}
+	</div>
+</div>

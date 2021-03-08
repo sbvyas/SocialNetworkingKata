@@ -1,0 +1,15 @@
+﻿@model IEnumerable<SocialNetworking_Kata.Data.Models.UserProfile>
+
+
+@{
+	ViewBag.Title = "UserFollower";
+}
+
+<h2>Follow</h2>
+@if (Model != null)
+{
+	foreach (var item in Model)
+	{
+		@Html.Partial("_UserFollowerSummary", item)
+	}
+}

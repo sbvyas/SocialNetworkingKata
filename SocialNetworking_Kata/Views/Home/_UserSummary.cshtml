@@ -1,0 +1,16 @@
+﻿@model SocialNetworking_Kata.Data.Models.UserProfile
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">@Model.UserFirstName</h3>
+	</div>
+	<div class="panel-body">
+		@Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
+		@Html.ActionLink("Details", "UserDetails", new { id = Model.UserId }) |
+		@Html.ActionLink("Delete", "Delete", new { id = Model.UserId }) |
+		@Html.ActionLink("Publish", "Publish", new { id = Model.UserId }) |
+		@Html.ActionLink("Follow", "Follows", new { id = Model.UserId }) |
+		@Html.ActionLink("View TimeLine", "DisplayTimeLine", new { id = Model.UserId })
+	</div>
+</div>
+

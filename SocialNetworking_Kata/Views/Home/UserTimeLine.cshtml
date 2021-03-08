@@ -1,0 +1,45 @@
+﻿@model SocialNetworking_Kata.Data.Models.Publish
+
+@{
+	ViewBag.Title = "UserTimeLine";
+}
+
+<h2>Timeline details for @Html.DisplayFor(model => model.UserProfile.UserFirstName)  @Html.DisplayFor(model => model.UserProfile.UserLastName) </h2>
+	<div>
+		<hr />
+		<dl class="dl-horizontal">
+			<dt>
+				@Html.LabelFor(model => model.PublishContent, "Publish", htmlAttributes: new { @class = "control-label col-md-2" })				
+			</dt>
+
+			<dd>
+				@Html.TextAreaFor(model => model.PublishContent)
+			</dd>
+			<dt>
+				@Html.LabelFor(model => model.CreatedTime, "Published Time", htmlAttributes: new { @class = "control-label col-md-2" })
+			</dt>
+
+			<dd> 			
+				@{ 
+					var actualdata = Html.DisplayFor(model => model.CreatedTime);
+					var time = Html.DisplayFor(model => model.CreatedTime.Minute);
+					var result = DateTime.UtcNow.Minute - long.Parse(time.ToString());
+					if (result < 0)
+					{
+						@Html.DisplayFor(model => model.CreatedTime.Hour); <h6>Hours ago</h6>
+					}
+					else if(result == 0)
+					{
+						var seconds = DateTime.UtcNow.Second - long.Parse(time.ToString());
+						@Html.DisplayFor(model => model.CreatedTime.Second); <h6>Seconds ago</h6>
+					}
+					else
+					{  @result.ToString() <h6> Minutes ago </h6> }
+					}
+					
+			</dd>
+		</dl>
+	</div>
+	<p>
+		@Html.ActionLink("Back to User", "User", new { id = Model.UserPublishId })
+	</p>

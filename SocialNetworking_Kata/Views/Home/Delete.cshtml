@@ -1,0 +1,31 @@
+﻿@model SocialNetworking_Kata.Data.Models.UserProfile
+
+@{
+	ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you really want to delete this profile?</h3>
+<div>
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.LabelFor(model => model.UserFirstName, "User Name", htmlAttributes: new { @class = "control-label col-md-2" })
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.UserFirstName) @Html.DisplayFor(model => model.UserLastName)
+		</dd>
+		
+	</dl>
+
+	@using (Html.BeginForm())
+	{
+		@Html.AntiForgeryToken()
+
+		<div class="form-actions no-color">
+			<input type="submit" value="Delete" class="btn btn-default" /> |
+			@Html.ActionLink("Back to User", "User", new { id = Model.UserId })
+		</div>
+	}
+</div>

@@ -1,0 +1,35 @@
+﻿@model SocialNetworking_Kata.Data.Models.UserProfile
+
+@{
+	ViewBag.Title = "UserDetails";
+}
+
+<h2>Detail for @Html.DisplayFor(model => model.UserFirstName) </h2>
+
+<div>
+	<hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.LabelFor(model => model.UserFirstName, "First Name", htmlAttributes: new { @class = "control-label col-md-2" })			
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.UserFirstName)
+		</dd>
+		<dt>
+			@Html.LabelFor(model => model.UserLastName, "Last Name", htmlAttributes: new { @class = "control-label col-md-2" })
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.UserLastName)
+		</dd>
+	</dl>
+</div>
+<p>
+	@Html.ActionLink("Edit", "Edit", new { id = Model.UserId }) |
+	@Html.ActionLink("Back to User", "User", new { id = Model.UserId }) |
+	@Html.ActionLink("Details", "UserDetails", new { id = Model.UserId }) |
+	@Html.ActionLink("Delete", "Delete", new { id = Model.UserId }) |
+	@Html.ActionLink("Publish", "Publish", new { id = Model.UserId }) |
+	@Html.ActionLink("Follow", "UserFollower", new { id = Model.UserId }) 
+</p>

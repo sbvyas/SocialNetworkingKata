@@ -1,0 +1,21 @@
+﻿@model IEnumerable<SocialNetworking_Kata.Data.Models.UserProfile>
+
+@{
+	ViewBag.Title = "User";
+}
+
+<h2>Index</h2>
+
+<p>
+	@Html.ActionLink("Create New", "AddProfile")
+</p>
+@if (Model != null)
+{
+	foreach (var item in Model)
+	{
+		if (item != null)
+		{
+			@Html.Partial("_UserSummary", item)
+		}
+	}
+}

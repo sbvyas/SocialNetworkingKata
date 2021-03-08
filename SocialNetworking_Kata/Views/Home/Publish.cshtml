@@ -1,0 +1,38 @@
+﻿@model SocialNetworking_Kata.Data.Models.Publish
+@{
+	ViewBag.Title = "Publish";
+}
+<h2>Publish</h2>
+
+@using (Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+	@Html.HiddenFor(P => P.UserPublishId)
+	<div class="form-horizontal">
+		<hr />
+		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+		<div class="form-group">
+			@Html.LabelFor(model => model.PublishContent, "Publish Content", htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-md-10">
+				@Html.TextAreaFor(model => model.PublishContent, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.PublishContent, "", new { @class = "text-danger" })
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-offset-2 col-md-10">
+				<input type="submit" value="Publish" class="btn btn-default" />
+			</div>
+		</div>
+	</div>
+}
+
+<div>
+	@*@Html.ActionLink("Back to User", "User", new { id = Model.UserId })*@
+	@{ var userid = Html.HiddenFor(model => model.UserProfile.UserId); }
+	@Html.ActionLink("Back to User", "User", new { id = userid })
+</div>
+
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+}
+

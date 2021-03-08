@@ -1,0 +1,12 @@
+C:\Users\shiva\source\repos\SocialNetworking_Kata\SocialNetworking_Kata.Data\bin\Debug\SocialNetworking_Kata.Data.dll.config
+C:\Users\shiva\source\repos\SocialNetworking_Kata\SocialNetworking_Kata.Data\bin\Debug\SocialNetworking_Kata.Data.dll
+C:\Users\shiva\source\repos\SocialNetworking_Kata\SocialNetworking_Kata.Data\bin\Debug\SocialNetworking_Kata.Data.pdb
+C:\Users\shiva\source\repos\SocialNetworking_Kata\SocialNetworking_Kata.Data\bin\Debug\EntityFramework.dll
+C:\Users\shiva\source\repos\SocialNetworking_Kata\SocialNetworking_Kata.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\shiva\source\repos\SocialNetworking_Kata\SocialNetworking_Kata.Data\bin\Debug\EntityFramework.xml
+C:\Users\shiva\source\repos\SocialNetworking_Kata\SocialNetworking_Kata.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\shiva\source\repos\SocialNetworking_Kata\SocialNetworking_Kata.Data\obj\Debug\SocialNetworking_Kata.Data.csproj.CoreCompileInputs.cache
+C:\Users\shiva\source\repos\SocialNetworking_Kata\SocialNetworking_Kata.Data\obj\Debug\SocialNetworking_Kata.Data.csproj.CopyComplete
+C:\Users\shiva\source\repos\SocialNetworking_Kata\SocialNetworking_Kata.Data\obj\Debug\SocialNetworking_Kata.Data.dll
+C:\Users\shiva\source\repos\SocialNetworking_Kata\SocialNetworking_Kata.Data\obj\Debug\SocialNetworking_Kata.Data.pdb
+C:\Users\shiva\source\repos\SocialNetworking_Kata\SocialNetworking_Kata.Data\obj\Debug\SocialNetworking_Kata.Data.csprojAssemblyReference.cache

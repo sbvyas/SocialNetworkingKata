@@ -1,0 +1,11 @@
+﻿@model IEnumerable<SocialNetworking_Kata.Data.Models.Publish>
+
+@{
+	ViewBag.Title = "DisplayTimeLine";
+}
+
+<h2>Timeline</h2>
+@foreach (var item in Model)
+{
+	@Html.Partial("UserTimeLine", item)
+}
